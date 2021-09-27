@@ -1,0 +1,63 @@
+@media (max-width: 1200px) {
+  .app {
+    width: 979px;
+  }
+  .todo-titlebox {
+    width: calc(100% - 158px);
+  }
+
+  .todo-btnbox {
+    width: 158px;
+  }
+  .todo-btn {
+    padding: 6px 12px;
+    min-width: 72px;
+  }
+}
+
+@media (max-width: 992px) {
+  .app {
+    width: 840px;
+  }
+  .todo-titlebox {
+    width: calc(100% - 144px);
+  }
+
+  .todo-btnbox {
+    width: 144px;
+  }
+  .todo-btn {
+    padding: 4px 10px;
+    min-width: 62px;
+  }
+}
+
+@media (max-width: 860px) {
+  .app {
+    width: 600px;
+    flex-direction: column;
+  }
+  .app-newtask {
+    width: 100%;
+  }
+  .app-todolist {
+    width: 100%;
+    border-top-color: transparent;
+    border-left-color: #333;
+  }
+}
+
+@media (max-width: 610px) {
+  .app {
+    width: 430px;
+  }
+
+  .todo-btnbox {
+    width: 126px;
+  }
+
+  .todo-btn {
+    padding: 4px 8px;
+    min-width: 52px;
+  }
+}

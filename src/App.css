@@ -1,38 +1,234 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-family: "Roboto", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  padding: 48px 16px;
+  min-height: 80vh;
+}
+
+/* NEW TASK */
+.app-newtask {
+  width: 45%;
+  padding: 36px 0;
+  border: 1px solid #333;
+}
+
+.app-heading {
+  text-align: center;
+  margin-bottom: 36px;
+  font-size: 20px;
+  color: #000;
+}
+.todo-search,
+.todoForm-input {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 15px;
+  outline: none;
+  border-radius: 2px;
+  border: solid 1px #999;
+}
+
+.todo-search:focus,
+.todoForm-input:focus,
+#todoForm-textarea:focus {
+  background-color: whitesmoke;
+}
+
+#todoForm {
+  margin: 32px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  margin: 24px 0 8px;
+  font-weight: bold;
+}
+
+#todoForm-textarea {
+  width: 100%;
+  height: 120px;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.todoForm-date-piority-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todoForm-half-box {
+  width: 45%;
+}
+
+#todoForm-date {
+  width: 100%;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+#todoForm-piority {
+  width: 100%;
+  height: 32px;
+  font-size: 13px;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.todoForm-btn {
+  width: 100%;
+  background-color: #5cb85c;
+  margin-top: 32px;
+  padding: 8px;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* TODO LIST */
+.app-todolist {
+  position: relative;
+  width: 55%;
+  padding: 36px;
+  border: 1px solid #333;
+  border-left-color: transparent;
+}
+
+.todo-list {
+  list-style: none;
+  margin-bottom: 84px;
+}
+.todo-item {
+  margin: 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.todo-item-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #333;
+  padding: 16px;
+}
+
+.todo-item-update {
+  width: 100%;
+  padding: 32px;
+  border: 1px solid #333;
+  display: none;
+}
+.todo-item-update.active {
+  display: block;
+}
+
+.todo-titlebox {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: calc(100% - 214px);
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 16px 0 32px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-btnbox {
+  width: 214px;
+}
+
+.todo-btn {
+  font-size: 13px;
+  padding: 6px 16px;
+  min-width: 100px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.todoForm-btn:hover,
+.todo-btn:hover {
+  opacity: 0.6;
+}
+
+.todo-btn.red {
+  color: #fff;
+  background-color: #d9534f;
+}
+
+.todo-btn.blue {
+  color: #fff;
+  background-color: #00bcd4;
+  margin-right: 12px;
+}
+
+.todo-update {
+  width: 100%;
+  border: 1px solid #333;
+  border-top: transparent;
+}
+
+/* Bull ACtion Box*/
+
+.todo-bullAction-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-bullAction-title {
+  padding: 32px 24px;
+  color: #666;
+}
+
+.todo-bullAction-btn {
+  display: flex;
+  align-items: center;
+}
+
+.todo-bullAction-done-btn {
+  color: #fff;
+  background-color: #00bcd4;
+}
+
+.todo-bullAction-remove-btn {
+  margin: 24px;
+  background-color: #d9534f;
+  color: #fff;
 }
